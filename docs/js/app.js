@@ -1,5 +1,5 @@
 // Hermes Community Hub — App
-const GITHUB_RAW = 'https://raw.githubusercontent.com/HemanthKumarSN24/hermes-community-hub/main';
+const GITHUB_RAW = 'https://raw.githubusercontent.com/hermeshub/hermes-community-hub/main';
 
 async function loadSkills() {
     try {
@@ -67,7 +67,7 @@ function skillCard(skill, featured = false) {
                 <span>📅 ${skill.published || '?'}</span>
                 <span>⚡ v${skill.version || '1.0'}</span>
             </div>
-            <a class="card-install" target="_blank" href="https://github.com/HemanthKumarSN24/hermes-community-hub/tree/main/skills/${skill.name}">View on GitHub →</a>
+            <a class="card-install" target="_blank" href="https://github.com/hermeshub/hermes-community-hub/tree/main/skills/${skill.name}">View on GitHub →</a>
         </div>
     `;
 }

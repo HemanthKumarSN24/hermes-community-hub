@@ -2,7 +2,7 @@
 # ==============================
 # Hermes Community Hub - Setup
 # ==============================
-# Run: curl -sL https://raw.githubusercontent.com/HemanthKumarSN24/hermes-community-hub/main/scripts/hub-setup.sh | bash
+# Run: curl -sL https://raw.githubusercontent.com/hermeshub/hermes-community-hub/main/scripts/hub-setup.sh | bash
 #
 # This script:
 # 1. Creates ~/.hermes/hub/ directory structure
@@ -15,8 +15,8 @@ set -e
 HUB_DIR="$HOME/.hermes/hub"
 SCRIPTS_DIR="$HUB_DIR/scripts"
 INSTALLED_DIR="$HUB_DIR/installed"
-HUB_REPO="https://raw.githubusercontent.com/HemanthKumarSN24/hermes-community-hub/main"
-HUB_GIT="https://github.com/HemanthKumarSN24/hermes-community-hub.git"
+HUB_REPO="https://raw.githubusercontent.com/hermeshub/hermes-community-hub/main"
+HUB_GIT="https://github.com/hermeshub/hermes-community-hub.git"
 
 echo "========================================"
 echo "  Hermes Community Hub — Setup"

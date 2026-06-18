@@ -3,7 +3,7 @@
 ## One-command setup
 
 ```bash
-curl -sL https://raw.githubusercontent.com/HemanthKumarSN24/hermes-community-hub/main/scripts/hub-setup.sh | bash
+curl -sL https://raw.githubusercontent.com/hermeshub/hermes-community-hub/main/scripts/hub-setup.sh | bash
 ```
 
 This will:

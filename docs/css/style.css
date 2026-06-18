@@ -19,14 +19,16 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 /* Navbar */
 .navbar{background:rgba(10,10,15,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
 .navbar .container{display:flex;align-items:center;justify-content:space-between;height:60px}
-.nav-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:1.2rem}
-.brand-icon{font-size:1.4rem}
+.nav-brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.2rem}
+.nav-logo{width:32px;height:32px;border-radius:6px}
 .nav-links{display:flex;gap:24px}
 .nav-link{color:var(--text2);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s}
 .nav-link:hover{color:var(--accent2)}
 
 /* Hero */
 .hero{text-align:center;padding:80px 0 60px}
+.hero-logo{margin-bottom:24px}
+.hero-logo-img{width:100px;height:auto;opacity:.9}
 .hero h1{font-size:3rem;font-weight:800;margin-bottom:16px;letter-spacing:-1px}
 .gradient-text{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero-subtitle{font-size:1.15rem;color:var(--text2);max-width:600px;margin:0 auto 32px}
