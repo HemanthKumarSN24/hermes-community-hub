@@ -14,8 +14,7 @@ A community skill marketplace for **Hermes Agent** — discover, install, and sh
 
 ```bash
 # Add the hub to your Hermes
-```bash
-curl -sL https://raw.githubusercontent.com/hermeshub/hermes-community-hub/main/scripts/hub-setup.sh | bash
+curl -sL https://raw.githubusercontent.com/nous-hermeshub/hermes-community-hub/main/scripts/hub-setup.sh | bash
 
 # That's it. Your Hermes will now check the hub every 6 hours.
 ```
@@ -24,7 +23,7 @@ curl -sL https://raw.githubusercontent.com/hermeshub/hermes-community-hub/main/s
 
 ```bash
 # Publish a skill to the hub
-curl -sL https://raw.githubusercontent.com/hermeshub/hermes-community-hub/main/scripts/hub-publish.sh | bash -s -- --name "my-skill"
+curl -sL https://raw.githubusercontent.com/nous-hermeshub/hermes-community-hub/main/scripts/hub-publish.sh | bash -s -- --name "my-skill"
 ```
 
 See [SKILL_FORMAT.md](./SKILL_FORMAT.md) for the skill specification.

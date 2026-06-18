@@ -4,7 +4,7 @@ description: "Scrape Google Maps leads — extract business name, phone, email, 
 version: 1.0.0
 author:
   name: "LeadForge"
-  github: "hermeshub"
+  github: "nous-hermeshub"
 tags: [lead-generation, scraping, google-maps, business-data, sales]
 category: business
 platforms: [macos, linux]

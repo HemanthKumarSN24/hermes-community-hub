@@ -14,7 +14,7 @@ set -e
 
 HUB_DIR="$HOME/.hermes/hub"
 REPO_DIR="$HUB_DIR/repo"
-HUB_REPO="hermeshub/hermes-community-hub"
+HUB_REPO="nous-hermeshub/hermes-community-hub"
 
 if [ $# -lt 2 ]; then
   echo "Usage:"

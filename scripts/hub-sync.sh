@@ -14,8 +14,8 @@ HUB_DIR="$HOME/.hermes/hub"
 SCRIPTS_DIR="$HUB_DIR/scripts"
 LAST_SEEN="$HUB_DIR/last-seen.json"
 REPO_DIR="$HUB_DIR/repo"
-HUB_REPO="https://raw.githubusercontent.com/hermeshub/hermes-community-hub/main"
-HUB_GIT="https://github.com/hermeshub/hermes-community-hub.git"
+HUB_REPO="https://raw.githubusercontent.com/nous-hermeshub/hermes-community-hub/main"
+HUB_GIT="https://github.com/nous-hermeshub/hermes-community-hub.git"
 
 # Fetch latest index.json
 INDEX=$(curl -sL "$HUB_REPO/index.json" 2>/dev/null)
