@@ -1,0 +1,49 @@
+{
+  "name": "Hub: Rate Skill",
+  "nodes": [
+    {
+      "id": "webhook",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "parameters": {
+        "path": "hub-rate",
+        "responseMode": "onReceived",
+        "options": {},
+        "httpMethod": "POST",
+        "responseData": "allEntries"
+      }
+    },
+    {
+      "id": "exec",
+      "name": "Update Ratings",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [550, 300],
+      "parameters": {
+        "command": "cd ~/Downloads/hermes/files/hermes-community-hub && python3 -c \"import json; import sys; body=json.load(sys.stdin); r=json.load(open('data/ratings.json')); r['ratings'].append(body); json.dump(r, open('data/ratings.json','w'),indent=2); print('rated')\"",
+        "executeInCommand": "terminal"
+      }
+    },
+    {
+      "id": "gitpush",
+      "name": "Git Commit & Push",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [850, 300],
+      "parameters": {
+        "command": "cd ~/Downloads/hermes/files/hermes-community-hub && git add -A && git commit -m \"rating update\" && git push",
+        "executeInCommand": "terminal"
+      }
+    }
+  ],
+  "connections": {
+    "webhook": {"main": [[{"node": "Update Ratings", "type": "main", "index": 0}]]},
+    "Update Ratings": {"main": [[{"node": "Git Commit & Push", "type": "main", "index": 0}]]},
+    "Git Commit & Push": {"main": [[]]}
+  },
+  "settings": {},
+  "staticData": null,
+  "pinData": {}
+}

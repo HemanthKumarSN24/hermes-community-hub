@@ -1,0 +1,81 @@
+{
+  "name": "Hub: Publish Skill",
+  "nodes": [
+    {
+      "id": "webhook-pub",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ],
+      "parameters": {
+        "path": "hub-publish",
+        "responseMode": "onReceived",
+        "options": {},
+        "httpMethod": "POST",
+        "responseData": "allEntries"
+      }
+    },
+    {
+      "id": "http-pub",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        550,
+        300
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:7890/hub/publish",
+        "authentication": "none",
+        "sendBody": true,
+        "options": {
+          "timeout": 30000
+        }
+      }
+    },
+    {
+      "id": "respond-pub",
+      "name": "Respond",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ],
+      "parameters": {
+        "respondWith": "json"
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {},
+  "staticData": null,
+  "pinData": {}
+}
