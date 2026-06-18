@@ -95,7 +95,7 @@ def parse_frontmatter(frontmatter: str) -> dict:
 skills_dir = 'skills'
 skills = []
 if os.path.exists(skills_dir):
-    for skill_path in sorted(glob.glob(f'{skills_dir}/*/SKILL.md')):
+    for skill_path in sorted(glob.glob(f'{skills_dir}/**/SKILL.md', recursive=True)):
         skill_name = os.path.basename(os.path.dirname(skill_path))
 
         with open(skill_path) as f:
