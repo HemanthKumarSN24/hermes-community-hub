@@ -19,14 +19,16 @@ show_list() {
   echo "Available skills in the hub:"
   echo "---------------------------"
   if [ -f "$REPO_DIR/index.json" ]; then
-    python3 -c "
-import json
-with open('$REPO_DIR/index.json') as f:
+    export PY_REPO_DIR="$REPO_DIR"
+    python3 << 'PYEOF'
+import json, os
+repo = os.environ['PY_REPO_DIR']
+with open(f'{repo}/index.json') as f:
     data = json.load(f)
 skills = data.get('skills', []) if isinstance(data, dict) else data
 for s in skills:
-    print(f\"  {s['name']:<30} v{s.get('version','?')}  {s.get('description','')}\")
-"
+    print(f"  {s['name']:<30} v{s.get('version','?')}  {s.get('description','')}")
+PYEOF
   else
     echo "  No index found. Run hub-sync.sh first."
   fi
@@ -38,21 +40,26 @@ show_search() {
   echo "Search results for '$term':"
   echo "---------------------------"
   if [ -f "$REPO_DIR/index.json" ]; then
-    python3 -c "
-import json
-with open('$REPO_DIR/index.json') as f:
+    export PY_REPO_DIR="$REPO_DIR"
+    export PY_TERM="$term"
+    python3 << 'PYEOF'
+import json, os
+repo = os.environ['PY_REPO_DIR']
+term = os.environ['PY_TERM'].lower()
+with open(f'{repo}/index.json') as f:
     data = json.load(f)
 skills = data.get('skills', []) if isinstance(data, dict) else data
-term = '$term'.lower()
+found = False
 for s in skills:
     name = s.get('name','').lower()
     desc = s.get('description','').lower()
     tags = ' '.join(s.get('tags',[])).lower()
     if term in name or term in desc or term in tags:
-        print(f\"  {s['name']:<30} v{s.get('version','?')}  {s.get('description','')}\")
-if '$term' not in dir():
+        print(f"  {s['name']:<30} v{s.get('version','?')}  {s.get('description','')}")
+        found = True
+if not found:
     print('  No matches found')
-")
+PYEOF
   else
     echo "  No index found. Run hub-sync.sh first."
   fi
