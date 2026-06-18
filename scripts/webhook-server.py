@@ -3,7 +3,7 @@
 import json, os, subprocess, sys
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
-HUB_DIR = os.path.expanduser("~/Downloads/hermes/files/hermes-community-hub")
+HUB_DIR = os.path.expanduser("~/.hermes/hub/repo")
 HOST, PORT = "127.0.0.1", 7890
 
 class HubHandler(BaseHTTPRequestHandler):
