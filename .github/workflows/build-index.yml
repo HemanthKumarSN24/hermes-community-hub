@@ -1,0 +1,30 @@
+name: Build Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - '.github/workflows/build-index.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build index.json
+        run: python3 scripts/build-index.py
+
+      - name: Commit index.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add index.json
+          git diff --cached --quiet || (git commit -m "Update index.json [auto]" && git push)
