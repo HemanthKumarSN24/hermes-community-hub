@@ -20,6 +20,12 @@
       "rating": 5,
       "user": "n8n",
       "review": "from n8n"
+    },
+    {
+      "skill_name": "lead-scraper-pro",
+      "rating": 5,
+      "user": "final",
+      "review": "end-to-end"
     }
   ],
   "reviews": [],
