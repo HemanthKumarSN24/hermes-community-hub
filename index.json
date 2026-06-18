@@ -1,11 +1,13 @@
 {
   "skills": [
     {
-      "name": "LeadForge",
+      "name": "lead-scraper-pro",
       "description": "Scrape Google Maps leads \u2014 extract business name, phone, email, website, rating",
       "version": "1.0.0",
-      "author": "",
-      "github": "HemanthKumarSN24",
+      "author": {
+        "name": "LeadForge",
+        "github": "HemanthKumarSN24"
+      },
       "tags": [
         "lead-generation",
         "scraping",
@@ -20,14 +22,16 @@
       ],
       "published": "2026-06-18",
       "license": "MIT",
-      "metadata": "",
-      "hermes": "",
-      "related_skills": [
-        "web-scraping",
-        "n8n-automation",
-        "whatsapp-crm"
-      ],
-      "icon": "\ud83c\udfaf"
+      "metadata": {
+        "hermes": {
+          "related_skills": [
+            "web-scraping",
+            "n8n-automation",
+            "whatsapp-crm"
+          ],
+          "icon": "\ud83c\udfaf"
+        }
+      }
     }
   ],
   "count": 1
