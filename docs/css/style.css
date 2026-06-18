@@ -1,0 +1,87 @@
+/* Hermes Community Hub — Styles */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a0f;
+  --bg2:#12121a;
+  --card:#1a1a28;
+  --border:#2a2a3e;
+  --text:#e8e8f0;
+  --text2:#8888a0;
+  --accent:#6c5ce7;
+  --accent2:#a29bfe;
+  --green:#00cec9;
+  --orange:#fdcb6e;
+  --radius:12px;
+}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* Navbar */
+.navbar{background:rgba(10,10,15,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:1.2rem}
+.brand-icon{font-size:1.4rem}
+.nav-links{display:flex;gap:24px}
+.nav-link{color:var(--text2);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-link:hover{color:var(--accent2)}
+
+/* Hero */
+.hero{text-align:center;padding:80px 0 60px}
+.hero h1{font-size:3rem;font-weight:800;margin-bottom:16px;letter-spacing:-1px}
+.gradient-text{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-subtitle{font-size:1.15rem;color:var(--text2);max-width:600px;margin:0 auto 32px}
+.hero-cta{display:flex;align-items:center;justify-content:center;gap:8px;max-width:700px;margin:0 auto}
+.install-cmd{background:var(--card);padding:14px 20px;border-radius:var(--radius);font-size:.85rem;color:var(--green);border:1px solid var(--border);flex:1;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.copy-btn{background:var(--accent);color:#fff;border:none;padding:14px 24px;border-radius:var(--radius);cursor:pointer;font-weight:600;font-size:.85rem;transition:opacity .2s}
+.copy-btn:hover{opacity:.85}
+.copy-btn:active{transform:scale(.97)}
+
+/* Stats */
+.stats-section{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center}
+.stat-number{display:block;font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-label{font-size:.85rem;color:var(--text2);margin-top:4px;display:block;text-transform:uppercase;letter-spacing:1px}
+
+/* Search */
+.search-section{margin-bottom:40px}
+.search-box input{width:100%;background:var(--card);border:1px solid var(--border);color:var(--text);padding:16px 20px;border-radius:var(--radius);font-size:1rem;outline:none;transition:border .2s}
+.search-box input:focus{border-color:var(--accent)}
+.filter-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.filter-tag{background:var(--card);border:1px solid var(--border);padding:6px 14px;border-radius:20px;font-size:.8rem;color:var(--text2);cursor:pointer;transition:all .2s}
+.filter-tag:hover,.filter-tag.active{border-color:var(--accent);color:var(--accent2)}
+
+/* Sections */
+.section{margin-bottom:48px}
+.section h2{font-size:1.5rem;font-weight:700;margin-bottom:20px}
+
+/* Skill Cards */
+.skills-grid,.trending-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+.skill-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:all .2s;cursor:default}
+.skill-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 30px rgba(108,92,231,.15)}
+.skill-card .card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px}
+.skill-card .card-icon{font-size:1.8rem}
+.skill-card .card-name{font-size:1.1rem;font-weight:700}
+.skill-card .card-author{font-size:.8rem;color:var(--text2);margin-top:2px}
+.skill-card .card-desc{font-size:.9rem;color:var(--text2);margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.skill-card .card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.skill-card .card-tag{background:rgba(108,92,231,.15);color:var(--accent2);padding:3px 10px;border-radius:12px;font-size:.75rem;font-weight:500}
+.skill-card .card-meta{display:flex;gap:16px;font-size:.75rem;color:var(--text2)}
+.skill-card .card-install{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;padding:8px 16px;border-radius:8px;font-size:.8rem;font-weight:600;text-decoration:none;transition:opacity .2s}
+.skill-card .card-install:hover{opacity:.85}
+
+/* Empty state */
+.empty-state{text-align:center;padding:60px 20px;color:var(--text2)}
+.empty-state h3{font-size:1.2rem;margin-bottom:8px;color:var(--text)}
+
+/* Footer */
+.footer{text-align:center;padding:40px 0;border-top:1px solid var(--border);color:var(--text2);font-size:.85rem}
+.footer a{color:var(--accent2);text-decoration:none}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero h1{font-size:2rem}
+  .stats-section{grid-template-columns:repeat(2,1fr)}
+  .skills-grid,.trending-grid{grid-template-columns:1fr}
+  .hero-cta{flex-direction:column}
+  .install-cmd{white-space:normal;overflow:auto}
+}

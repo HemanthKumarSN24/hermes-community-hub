@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes Community Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-icon">⚡</span>
+                <span class="brand-text">Hermes Hub</span>
+            </div>
+            <div class="nav-links">
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#trending" class="nav-link">Trending</a>
+                <a href="https://github.com/HemanthKumarSN24/hermes-community-hub" target="_blank" class="nav-link">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Discover & Share <span class="gradient-text">Hermes Skills</span></h1>
+            <p class="hero-subtitle">A community-driven marketplace for Hermes Agent skills. Install with one command, contribute with one PR.</p>
+            <div class="hero-cta">
+                <code class="install-cmd">curl -sL https://raw.githubusercontent.com/HemanthKumarSN24/hermes-community-hub/main/scripts/hub-setup.sh | bash</code>
+                <button class="copy-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent)">Copy</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="stats" class="stats-section">
+            <div class="stat-card">
+                <span class="stat-number" id="total-skills">0</span>
+                <span class="stat-label">Skills</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="total-authors">0</span>
+                <span class="stat-label">Authors</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Command Install</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">Free</span>
+                <span class="stat-label">Always Open</span>
+            </div>
+        </section>
+
+        <section id="search-section" class="search-section">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search skills by name, tag, or category..." oninput="filterSkills()">
+                <div class="filter-tags" id="filter-tags"></div>
+            </div>
+        </section>
+
+        <section id="trending" class="section">
+            <h2>🔥 Trending Now</h2>
+            <div class="trending-grid" id="trending-grid"></div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>All Skills</h2>
+            <div class="skills-grid" id="skills-grid"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built for the Hermes Agent community. Open source — <a href="https://github.com/HemanthKumarSN24/hermes-community-hub">contribute on GitHub</a>.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
