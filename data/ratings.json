@@ -1,1 +1,15 @@
-{"ratings": [], "reviews": [], "trending": {"weekly": [], "monthly": []}}
+{
+  "ratings": [
+    {
+      "skill_name": "lead-scraper-pro",
+      "rating": 5,
+      "user": "demo",
+      "review": "Great tool!"
+    }
+  ],
+  "reviews": [],
+  "trending": {
+    "weekly": [],
+    "monthly": []
+  }
+}
