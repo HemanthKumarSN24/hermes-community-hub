@@ -47706,6 +47706,40 @@
       }
     },
     {
+      "name": "hermes-tweet",
+      "description": "Use Hermes Tweet for X/Twitter research, social listening, and approval-gated account actions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Xquik",
+        "github": "Xquik-dev"
+      },
+      "tags": [
+        "x",
+        "twitter",
+        "hermes",
+        "plugin",
+        "social-media",
+        "research",
+        "automation"
+      ],
+      "category": "social-media",
+      "platforms": [
+        "macos",
+        "linux",
+        "windows"
+      ],
+      "published": "2026-06-22",
+      "license": "MIT",
+      "metadata": {
+        "hermes": {
+          "source": "Xquik-dev/hermes-tweet",
+          "risk": "safe",
+          "related_skills": [],
+          "readme_url": "https://github.com/Xquik-dev/hermes-tweet"
+        }
+      }
+    },
+    {
       "name": "google-sheets-automation",
       "description": "Lightweight Google Sheets integration with standalone OAuth authentication. No MCP server required. Full read/write access.",
       "version": 1.0,
@@ -56944,5 +56978,5 @@
       }
     }
   ],
-  "count": 1942
+  "count": 1943
 }
