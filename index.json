@@ -47706,6 +47706,76 @@
       }
     },
     {
+      "name": "xquik-x-follower-scraper",
+      "description": "Scrape X followers, following, verified followers, lists, and communities with Xquik's Apify Actor.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Xquik",
+        "github": "Xquik-dev"
+      },
+      "tags": [
+        "apify",
+        "x",
+        "twitter",
+        "followers",
+        "scraping",
+        "social-media"
+      ],
+      "category": "social-media",
+      "platforms": [
+        "macos",
+        "linux",
+        "windows"
+      ],
+      "published": "2026-07-27",
+      "license": "MIT",
+      "metadata": {
+        "hermes": {
+          "related_skills": [
+            "xquik-x-tweet-scraper",
+            "apify-ultimate-scraper"
+          ],
+          "icon": "\ud83d\udc65",
+          "readme_url": "https://apify.com/xquik/x-follower-scraper"
+        }
+      }
+    },
+    {
+      "name": "xquik-x-tweet-scraper",
+      "description": "Scrape X posts, searches, timelines, threads, replies, quotes, and engagement with Xquik's Apify Actor.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Xquik",
+        "github": "Xquik-dev"
+      },
+      "tags": [
+        "apify",
+        "x",
+        "twitter",
+        "scraping",
+        "social-media",
+        "research"
+      ],
+      "category": "social-media",
+      "platforms": [
+        "macos",
+        "linux",
+        "windows"
+      ],
+      "published": "2026-07-27",
+      "license": "MIT",
+      "metadata": {
+        "hermes": {
+          "related_skills": [
+            "xquik-x-follower-scraper",
+            "apify-ultimate-scraper"
+          ],
+          "icon": "\ud83d\udd0e",
+          "readme_url": "https://apify.com/xquik/x-tweet-scraper"
+        }
+      }
+    },
+    {
       "name": "google-sheets-automation",
       "description": "Lightweight Google Sheets integration with standalone OAuth authentication. No MCP server required. Full read/write access.",
       "version": 1.0,
@@ -56944,5 +57014,5 @@
       }
     }
   ],
-  "count": 1942
+  "count": 1944
 }
